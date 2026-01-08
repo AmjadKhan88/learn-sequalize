@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useUser } from "../context/UserContext";
+import api from "../configs/Api";
 function UserFormModal({ isOpen, onClose, userData = null }) {
   const {
     register,
@@ -148,8 +149,8 @@ function UserFormModal({ isOpen, onClose, userData = null }) {
      
 
           const response = userData?.id
-      ? await axios.put(
-          `${import.meta.env.VITE_API_URL}/api/users/${userData.id}`,
+      ? await api.put(
+          `/api/users/${userData.id}`,
           formData,
           {
             headers: {
@@ -157,7 +158,7 @@ function UserFormModal({ isOpen, onClose, userData = null }) {
             },
           }
         )
-      : await axios.post(`${import.meta.env.VITE_API_URL}/api/users`, formData, {
+      : await api.post(`/api/users`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

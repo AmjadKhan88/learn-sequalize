@@ -30,6 +30,7 @@ const deleteAvatarFile = (avatarUrl) => {
 
 export const addUser = async (req, res) => {
   try {
+    const userId = req.auth.id;
     const {
       name,
       email,
@@ -68,6 +69,7 @@ export const addUser = async (req, res) => {
     const userData = {
       name,
       email,
+      userId,
       age: parseInt(age),
       phone: phone || "",
       address: address || "",
@@ -112,6 +114,7 @@ export const updateUser = async (req, res) => {
   let uploadedFile = null;
   
   try {
+    const userId = req.auth.id;
     const { id } = req.params;
     const {
       name,
@@ -163,7 +166,7 @@ export const updateUser = async (req, res) => {
     }
 
     // Find user
-    const user = await User.findByPk(id);
+    const user = await User.findOne({ where: {id:id, userId:userId} });
     if (!user) {
       if (req.file?.filename) {
         deleteAvatarFile(req.file.filename);
@@ -267,10 +270,11 @@ export const updateUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   try {
+    const userId = req.auth.id;
     const { id } = req.params;
 
     // Find user
-    const user = await User.findByPk(id);
+    const user = await User.findOne({ where: {id:id, userId:userId}});
     if (!user) {
       return res.json({
         success: false,
@@ -297,6 +301,7 @@ export const getSingleUser = async (req, res) => {};
 
 export const getUser = async (req, res) => {
   try {
+    const {id} = req.auth;
     const { search, role } = req.query;
     
     // --- Pagination Logic ---
@@ -316,6 +321,10 @@ export const getUser = async (req, res) => {
     
     if (role) {
       whereClause.role = role;
+    }
+
+    if(id){
+      whereClause.userId = id;
     }
 
     // --- Execute Query ---

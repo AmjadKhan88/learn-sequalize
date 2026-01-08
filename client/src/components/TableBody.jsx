@@ -1,8 +1,8 @@
 import { Edit2, Eye, Trash2 } from "lucide-react";
 import {useUser} from "../context/UserContext"
 import toast from "react-hot-toast";
-import axios from "axios";
 import { useState } from "react";
+import api from "../configs/Api";
 
 export default function TableBody({ user, setEditingUser, setIsModalOpen,handleViewDetails }) {
   const handleEditUser = (user) => {
@@ -16,7 +16,7 @@ export default function TableBody({ user, setEditingUser, setIsModalOpen,handleV
   const handleDelete = async (id) => {
     setLoading(true)
       try {
-        const {data} = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/${id}`)
+        const {data} = await api.delete(`/api/users/${id}`)
         if(data.success){
           setUsers(users.filter(user => user.id !== id))
           toast.success(data.message)

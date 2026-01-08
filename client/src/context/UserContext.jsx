@@ -7,6 +7,8 @@ import { useState } from "react";
 import { createContext } from "react";
 import toast from "react-hot-toast";
 import { useSearchParams } from "react-router-dom";
+import api from "../configs/Api";
+import { useAuth } from "./AuthContext";
 
 
 
@@ -15,6 +17,7 @@ const UserContext = createContext();
 
 
 export const UserProvider = ({children}) => {
+    const {auth} = useAuth();
     const [users,setUsers] = useState([]);
     const [loading,setLoading] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
@@ -28,7 +31,7 @@ export const UserProvider = ({children}) => {
          const page = searchParams.get("page") || 1;
          const role = searchParams.get("role");
         try {
-            const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/api/users`, {
+            const {data} = await api.get('/api/users', {
             params: {
                 // If search is null, Axios omits it. 
                 // We use || undefined to ensure empty strings are also omitted.
@@ -56,6 +59,7 @@ export const UserProvider = ({children}) => {
     useEffect(()=> {
         // 2. Extract the search query (e.g., "?search=amjad&page=1")
         getAllUsers();
+
     },[searchParams])
     return (
         <UserContext.Provider value={{loading,getAllUsers,users,setUsers,totalUsers,totalPages,currentPage,setCurrentPage}}>
