@@ -75,7 +75,7 @@ export const userLogin = async (req, res) => {
       });
     }
 
-    const user = await Auth.findOne({ email: email });
+    const user = await Auth.findOne({ where: {email: email} });
 
     if (!user) {
       return res
@@ -132,3 +132,12 @@ export const getAuth = async (req, res) => {
     return res.status(404).json({ success: false, message: error.message });
   }
 };
+
+export const userLogout = async (req, res) => {
+  try {
+    res.clearCookie("token");
+    return res.status(200).json({ success: true, message: "logged out" });
+  } catch (error){
+    res.status(500).json({ success: false, message: error.message });
+  }
+}

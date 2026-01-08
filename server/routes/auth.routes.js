@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAuth, userLogin, userSignup } from '../controllers/auth.controller.js';
+import { getAuth, userLogin, userLogout, userSignup } from '../controllers/auth.controller.js';
 import { isAuth } from '../middlewares/auth.middleware.js';
 
 
@@ -15,6 +15,10 @@ authRoutes.post('/login',userLogin);
 
 // get auth data
 authRoutes.get('/',isAuth,getAuth);
+
+// logout
+authRoutes.post('/logout',isAuth,userLogout);
+
 
 
 export default authRoutes;
