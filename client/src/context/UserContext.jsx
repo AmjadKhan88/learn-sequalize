@@ -58,9 +58,9 @@ export const UserProvider = ({children}) => {
 
     useEffect(()=> {
         // 2. Extract the search query (e.g., "?search=amjad&page=1")
-        getAllUsers();
+       if(auth) getAllUsers();
 
-    },[searchParams])
+    },[searchParams,auth])
     return (
         <UserContext.Provider value={{loading,getAllUsers,users,setUsers,totalUsers,totalPages,currentPage,setCurrentPage}}>
             {children}

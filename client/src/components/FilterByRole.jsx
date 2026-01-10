@@ -27,6 +27,8 @@ const FilterByRole = () => {
       newParams.delete("role");
       setSearchParams(newParams);
     } else {
+      newParams.delete("page");
+      newParams.delete("search");
       newParams.set("role", role);
       setSearchParams(newParams);
     }

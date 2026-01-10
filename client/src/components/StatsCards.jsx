@@ -1,10 +1,13 @@
-import React from 'react'
+import { useUser } from "../context/UserContext"
 
 export default function StatsCards({users}) {
+
+  const {totalUsers} = useUser();
+
   return (
      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-6 text-white shadow-lg">
-              <div className="text-3xl font-bold">{users.length}</div>
+              <div className="text-3xl font-bold">{totalUsers || 0}</div>
               <div className="text-blue-100">Total Users</div>
               <div className="text-sm text-blue-200 mt-2">↗ 12% increase from last month</div>
             </div>
