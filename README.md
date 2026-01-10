@@ -21,17 +21,17 @@ Below are screenshots and a short animated demo. Copy your images into `docs/scr
 <!-- Side-by-side screenshots -->
 <p>
    <h3>Dashboard</h3>
-  <img src="client/public/Screenshot 2026-01-10 093029.png" alt="Main list view" width="100%" />
+  <img src="client/public/Screenshot 2026-01-10 093029.png" alt="Main list view" width="50%" />
 </p>
 
 <h3>Add New User</h3>
 <p>
-  <img src="client/public/Screenshot 2026-01-10 093050.png" alt="Detail / edit view" width="100%" />
+  <img src="client/public/Screenshot 2026-01-10 093050.png" alt="Detail / edit view" width="50%" />
 </p>
 
 
 <figure>
-  <img src="client/public/Screenshot 2026-01-10 093107.png" alt="Admin dashboard" width="800" />
+  <img src="client/public/Screenshot 2026-01-10 093107.png" alt="Admin dashboard" width="600" />
   <figcaption>View The User Details</figcaption>
 </figure>
 
