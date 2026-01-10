@@ -25,7 +25,7 @@ Below are screenshots and a short animated demo. Copy your images into `docs/scr
 </p>
 
 <figure>
-  <img src="docs/screenshots/screen-3.png" alt="Admin dashboard" width="800" />
+  <img src="client/public/Screenshot 2026-01-10 093107.png" alt="Admin dashboard" width="800" />
   <figcaption>Admin dashboard — user & role overview</figcaption>
 </figure>
 
