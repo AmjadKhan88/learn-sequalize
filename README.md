@@ -52,10 +52,10 @@ This repository provides a modern foundation for CRUD applications:
 
 ## Tech stack (suggested)
 This README is intentionally stack-agnostic. Common setups:
-- Backend: Node.js + Express / NestJS, or Laravel (PHP), or Django (Python)
-- Database: PostgreSQL / MySQL / SQLite
-- ORM: Prisma / TypeORM / Sequelize / Eloquent / Django ORM
-- Frontend (optional): React / Vue / Svelte
+- Backend: Node.js + Express
+- Database: PostgreSQL / MySQL / SQLite note(select your database)
+- ORM: Sequelize
+- Frontend (optional): React vite
 - Dev tools: Docker, GitHub Actions, ESLint, Prettier, Jest
 
 Replace the commands below according to your stack.
@@ -245,11 +245,3 @@ MIT License — see [LICENSE](./LICENSE) for details.
 
 Built by the community. Big thanks to contributors and open-source libraries.
 
----
-
-If you'd like, I can:
-- Commit this README to your repo (add it to main), or
-- Tailor the commands and examples to your actual tech stack (tell me which), or
-- Add badges, CI examples, and a Dockerfile/compose for quick deployment.
-
-Tell me how you'd like to proceed and I'll apply the changes.
