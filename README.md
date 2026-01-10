@@ -19,14 +19,20 @@ Below are screenshots and a short animated demo. Copy your images into `docs/scr
 ![Demo GIF](docs/demo.gif)
 
 <!-- Side-by-side screenshots -->
-<p float="left">
-  <img src="client/public/Screenshot 2026-01-10 093029.png" alt="Main list view" width="48%" />
-  <img src="client/public/Screenshot 2026-01-10 093050.png" alt="Detail / edit view" width="48%" />
+<p>
+   <h3>Dashboard</h3>
+  <img src="client/public/Screenshot 2026-01-10 093029.png" alt="Main list view" width="100%" />
 </p>
+
+<h3>Add New User</h3>
+<p>
+  <img src="client/public/Screenshot 2026-01-10 093050.png" alt="Detail / edit view" width="100%" />
+</p>
+
 
 <figure>
   <img src="client/public/Screenshot 2026-01-10 093107.png" alt="Admin dashboard" width="800" />
-  <figcaption>Admin dashboard — user & role overview</figcaption>
+  <figcaption>View The User Details</figcaption>
 </figure>
 
 ---
