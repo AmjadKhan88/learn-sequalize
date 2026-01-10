@@ -20,7 +20,7 @@ Below are screenshots and a short animated demo. Copy your images into `docs/scr
 
 <!-- Side-by-side screenshots -->
 <p float="left">
-  <img src="docs/screenshots/screen-1.png" alt="Main list view" width="48%" />
+  <img src="client/public/Screenshot 2026-01-10 093029.png" alt="Main list view" width="48%" />
   <img src="docs/screenshots/screen-2.png" alt="Detail / edit view" width="48%" />
 </p>
 
