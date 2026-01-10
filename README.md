@@ -7,9 +7,27 @@ A clean, powerful and extensible CRUD system boilerplate for building production
 
 > Build, iterate, and scale CRUD apps quickly — whether you're prototyping or shipping to production.
 
-Demo
+## Demo
+
 - Live demo: (add link)
-- Screenshots / GIF: docs/demo.gif (add a GIF or screenshot in `docs/`)
+
+### Screenshots / GIF
+
+Below are screenshots and a short animated demo. Copy your images into `docs/screenshots/` and the animated GIF into `docs/demo.gif`.
+
+<!-- Animated demo -->
+![Demo GIF](docs/demo.gif)
+
+<!-- Side-by-side screenshots -->
+<p float="left">
+  <img src="docs/screenshots/screen-1.png" alt="Main list view" width="48%" />
+  <img src="docs/screenshots/screen-2.png" alt="Detail / edit view" width="48%" />
+</p>
+
+<figure>
+  <img src="docs/screenshots/screen-3.png" alt="Admin dashboard" width="800" />
+  <figcaption>Admin dashboard — user & role overview</figcaption>
+</figure>
 
 ---
 
